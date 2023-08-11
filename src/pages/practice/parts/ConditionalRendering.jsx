@@ -50,7 +50,7 @@ function ConditionalRendering({ hidden, imageType }) {
       <img src={reactImagePath} alt="리액트" />
     );
 
-  console.log(imageComponent);
+  // console.log(imageComponent);
 
   const isReactImage = imageType === 'react';
   const imageLabel = isReactImage ? 'React' : 'Vite';
