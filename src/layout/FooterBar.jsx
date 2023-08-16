@@ -1,7 +1,12 @@
+import { useState } from "react";
+
 function FooterBar() {
+  // 현재(오늘) 년도를 화면에 출력하는 상태를 설정
+  const [currentYear] = useState(() => new Date().getFullYear());
+
   return (
-    <footer>
-      <small>모든 저작권은 이듬(EUID)에 있습니다.</small>
+    <footer className={`bg-slate-200 flex justify-center items-center p-5`}>
+      <small className={"text-base text-slate-700"}>Copyright {currentYear} &copy; 모든 저작권은 이듬(EUID)에 있습니다.</small>
     </footer>
   );
 }
