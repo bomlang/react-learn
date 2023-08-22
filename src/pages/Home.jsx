@@ -1,14 +1,11 @@
-import Logo from "../components/Logo";
+import useDocumentTitle from "@/hooks/useDocumentTitle";
 
 function Home() {
+  useDocumentTitle('홈');
+
   return (
     <div>
-      <h2>홈 페이지</h2>
-
-      <Logo />
-      <Logo color="blue" size={12} />
-      <Logo color="sky" />
-      <Logo color="rose" size={108} />
+      <h2 className="text-indigo-950">Home</h2>
     </div>
   );
 }

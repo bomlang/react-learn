@@ -1,9 +1,10 @@
 function GoToButton({ 
   direction/* 'down' | 'up' */, 
   label /* string */,
-...restProps
+  // 나머지 전달된 속성(prop)을 모은 객체
+  // rest props
+  ...restProps
 }) {
-
   // 문 또는 식
   // let className = '';
   // if (direction === 'down') {

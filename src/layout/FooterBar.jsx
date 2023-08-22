@@ -5,8 +5,10 @@ function FooterBar() {
   const [currentYear] = useState(() => new Date().getFullYear());
 
   return (
-    <footer className={`bg-slate-200 flex justify-center items-center p-5`}>
-      <small className={"text-base text-slate-700"}>Copyright {currentYear} &copy; 모든 저작권은 이듬(EUID)에 있습니다.</small>
+    <footer className="p-5 grid place-content-center bg-slate-200">
+      <small className="text-base text-slate-700">
+        Copyright <b>{currentYear}</b> &copy; 모든 저작권은 <strong>이듬(EUID)</strong>에 있습니다.
+      </small>
     </footer>
   );
 }
