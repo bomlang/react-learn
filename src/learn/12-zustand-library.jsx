@@ -1,4 +1,3 @@
-import { useCountStore } from '@/store/count';
 import { useListStore } from '@/store/list';
 import { string } from 'prop-types';
 import { useRef } from 'react';
@@ -6,13 +5,13 @@ import { Helmet } from 'react-helmet-async';
 import Logo from './partials/Logo';
 
 function ZustandLibrary() {
+  
   return (
     <>
       <Helmet>
         <title>Zustand Library - Learn</title>
       </Helmet>
       <h2 className="headline text-sky-500">Zustand 라이브러리 활용</h2>
-
       <details className="mb-10">
         <summary>Zustand 발음 어떻게 해야할까요?</summary>
 
@@ -92,14 +91,14 @@ export default ZustandLibrary;
 /* -------------------------------------------------------------------------- */
 
 function DisplayCount() {
-  const count = useCountStore((state) => state.count);
+  const list = useListStore((state) => state.list);
 
   return (
     <header className="header">
       <h1>
         <Logo />
       </h1>
-      <output className="output">{count}</output>
+      <output className="output">{list.length}</output>
     </header>
   );
 }
